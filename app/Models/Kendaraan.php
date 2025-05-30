@@ -8,9 +8,9 @@ class Kendaraan extends Model
 {
     protected $table = 'kendaraan';
 
-    public function variasi()
+    public function varian()
     {
-        return $this->belongsTo(Varian::class, 'variasi_id', 'id');
+        return $this->belongsTo(Varian::class, 'varian_id', 'id');
     }
     //
 }

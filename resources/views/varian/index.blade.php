@@ -1,6 +1,6 @@
 <h1>Variasi Mobil</h1>
 
-<table>
+<table class="table table-bordered table-striped">
     <tr>
         <th>Variasi Mobil</th>
         <th>Foto</th>

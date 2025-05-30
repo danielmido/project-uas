@@ -14,15 +14,16 @@ return new class extends Migration
         Schema::create('kendaraan', function (Blueprint $table) {
             $table->id();
             $table->string('tipe_kendaraan', 100);
-            $table->integer('tahun_kendaraan', 10);
+            $table->integer('tahun_kendaraan');
             $table->string('transmisi_kendaraan', 100);
             $table->string('plat_kendaraan', 100);
-            $table->integer('harga_kendaraan', 20);
-            $table->integer('kapasitasMesinOP_kendaraan', 20);
+            $table->integer('harga_kendaraan');
+            $table->string('kapasitasMesinOP_kendaraan', 20);
             $table->integer('kilometerOP_kendaraan');
             $table->string('bahanBakarOP_kendaraan', 100);
             $table->string('warnaFisikOP_kendaraan', 100);
             $table->string('foto', 100);
+            $table->foreignId('varian_id')->constrained('varian')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

@@ -1,6 +1,6 @@
 <h1>Pelanggan</h1>
 
-<table>
+<table class="table table-bordered table-striped">
     <tr>
         <th>Nama</th>
         <th>Jenis Kelamin</th>
