@@ -12,7 +12,8 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        //
+        $pelanggan = Pelanggan::all();
+        return view('pelanggan.index', compact('pelanggan'));
     }
 
     /**
@@ -36,7 +37,9 @@ class PelangganController extends Controller
      */
     public function show(pelanggan $pelanggan)
     {
-        //
+        $pelanggan = Pelanggan::findOrFail($pelanggan);
+        //dd($pelanggan);
+        return view('pelanggan.show', compact('pelanggan'));
     }
 
     /**

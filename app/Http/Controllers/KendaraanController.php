@@ -12,7 +12,8 @@ class KendaraanController extends Controller
      */
     public function index()
     {
-        //
+        $kendaraan = Kendaraan::all();
+        return view('kendaraan.index', compact('kendaraan'));
     }
 
     /**
@@ -36,7 +37,8 @@ class KendaraanController extends Controller
      */
     public function show(kendaraan $kendaraan)
     {
-        //
+         // dd($kendaraan)
+        return view('kendaraan.show', compact('kendaraan'));
     }
 
     /**

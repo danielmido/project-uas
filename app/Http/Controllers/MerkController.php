@@ -12,7 +12,8 @@ class MerkController extends Controller
      */
     public function index()
     {
-        //
+        $merk = Merk::all();
+        return view('merk.index', compact('merk'));
     }
 
     /**
@@ -36,7 +37,9 @@ class MerkController extends Controller
      */
     public function show(merk $merk)
     {
-        //
+        $merk = Merk::findOrFail($merk);
+        //dd($merk);
+        return view('merk.show', compact('merk'));
     }
 
     /**

@@ -12,7 +12,8 @@ class VarianController extends Controller
      */
     public function index()
     {
-        //
+        $fakultas = Varian::all();
+        return view('Varian.index', compact('varian'));
     }
 
     /**
@@ -36,7 +37,8 @@ class VarianController extends Controller
      */
     public function show(varian $varian)
     {
-        //
+        // dd($varian)
+        return view('varian.show', compact('varian'));
     }
 
     /**
