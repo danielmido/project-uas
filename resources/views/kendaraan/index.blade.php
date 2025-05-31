@@ -33,23 +33,23 @@
         <a href="{{ route('fakultas.create')}}" class="btn btn-primary"> Tambah Kendaraan </a>
             <table class="table" >
                 <tr>
-                    <th> id_kendaraan </th>
-                    <th> id_model </th>
-                    <th> tipe_kendaraan </th>
-                    <th> tahun_kendaraan </th>
-                    <th> transmisi_kendaraan </th>
-                    <th> plat_kendaraan </th>
-                    <th> harga_kendaraan </th>
-                    <th> kapasitasMesinOP_kendaraan </th>
-                    <th> kilometerOP_kendaraan </th>
-                    <th> bahanBakarOP_kendaraan </th>
-                    <th> warnaFisikOP_kendaraan </th>
-                    <th> img_kendaraan </th>
+                    <th> Id Kendaraan </th>
+                    <th> Nama Varian </th>
+                    <th> Tipe Kendaraan </th>
+                    <th> Tahun Kendaraan </th>
+                    <th> Transmisi Kendaraan </th>
+                    <th> Plat Kendaraan </th>
+                    <th> Harga Kendaraan </th>
+                    <th> Kapasitas Mesin OP Kendaraan </th>
+                    <th> Kilometer OP Kendaraan </th>
+                    <th> Bahan Bakar OP Kendaraan </th>
+                    <th> Warna FisikOP Kendaraan </th>
+                    <th> Foto Kendaraan </th>
                 </tr>
                 @foreach ($kendaraan as $item)
                     <tr>
                         <td>{{ $item->id_kendaraan }}</td>
-                        <td>{{ $item->varian->id_model }}</td>
+                        <td>{{ $item->varian->nama_varian }}</td>
                         <td>{{ $item->tipe_kendaraan }}</td>
                         <td>{{ $item->tahun_kendaraan }}</td>
                         <td>{{ $item->transmisi_kendaraan }}</td>

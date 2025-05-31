@@ -33,8 +33,9 @@
         <a href="{{ route('fakultas.create')}}" class="btn btn-primary"> Tambah varian </a>
             <table class="table" >
                 <tr>
-                    <th> nama_varian </th>
-                    <th> img_varian </th>
+                    <th> Nama Varian </th>
+                    <th> Foto Varian </th>
+                    <th> Merk </th>
                 </tr>
                 @foreach ($varian as $item)
                     <tr>

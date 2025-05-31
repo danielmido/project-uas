@@ -45,8 +45,8 @@
                     <td>{{ $kendaraan->id_kendaraan }}</td>
                 </tr>
                 <tr>
-                    <th>Id Model</th>
-                    <td>{{ $kendaraan->varian->id_model }}</td>
+                    <th>Nama Varian</th>
+                    <td>{{ $kendaraan->varian->nama_varian }}</td>
                 </tr>
                 <tr>
                     <th>Tipe Kendaraan</th>
