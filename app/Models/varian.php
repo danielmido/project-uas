@@ -9,10 +9,10 @@ class varian extends Model
      protected $table = 'varian';
 
      protected $fillable = [
-        'id_varian', 
-        'id_merk', 
-        'nama_varian', 
-        'img_varian'
+        'id',
+        'nama_tipe', 
+        'img_tipe',
+        'merk_id'
     ];
 
      public function varian()

@@ -9,8 +9,7 @@ class kendaraan extends Model
      protected $table = 'kendaraan';
 
      protected $fillable = [
-        'id_kendaraan', 
-        'id_variasi', 
+        'id',
         'tipe_kendaraan', 
         'tahun_kendaraan',
         'transmisi_kendaraan',
@@ -20,7 +19,8 @@ class kendaraan extends Model
         'kilometerOP_kendaraan',
         'bahanBakarOP_kendaraan',
         'warnaFisikOP_kendaraan',
-        'img_kendaraan'
+        'img_kendaraan',
+        'foto'
     ];
 
      public function kendaraan()

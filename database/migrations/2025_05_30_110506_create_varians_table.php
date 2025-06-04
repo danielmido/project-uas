@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('varians', function (Blueprint $table) {
+        Schema::create('varian', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_tipe', 100);
+            $table->string('img_tipe')->nullable();
+            $table->foreignId('merk_id')->constrained('merk')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('varians');
+        Schema::dropIfExists('varian');
     }
 };
