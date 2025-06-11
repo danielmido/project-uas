@@ -1,17 +1,71 @@
-<h1>Merk</h1>
+@extends('layout.main')
+@section('title', 'Merk')
 
-<table class="table table-bordered table-striped">
-    <tr>
-        <th>Nama</th>
-        <th>Foto</th>
-    </tr>
-@foreach ($merk as $item)
-    <tr>
-        <td>{{ $item->nama }}</td>
-        <td>{{ $item->foto }}</td>
-        <td><img src="images/{{$item->foto }}" width="80px" /></td>
-    </tr>
-    
+@section('content')
+<!--begin::Row-->
+<div class="row">
+        <div class="col-12">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+            <h3 class="card-title">List Merk</h3>
+            <div class="card-tools">
+                <button
+                type="button"
+                class="btn btn-tool"
+                data-lte-toggle="card-collapse"
+                title="Collapse"
+                >
+                <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                </button>
+                <button
+                type="button"
+                class="btn btn-tool"
+                data-lte-toggle="card-remove"
+                title="Remove"
+                >
+                <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            </div>
+            <div class="card-body">
+                <a href="{{ route ('merk.create')}}" class="btn btn-primary mb-3">Tambah merk</a>
+                <table class="table table-bordered table-striped align-middle">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th>Nama</th>
+                            <th>Foto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($merk as $item)
+                            <tr>                    
+                                <td>{{ $item->nama }}</td>
+                                <td>{{ $item->foto }}</td>
+                                <td><img src="images/{{$item->foto }}" width="80px" /></td>
+                                <td>
+                                    <a href="{{ route('merk.show', $item->id) }}" class="btn btn-info">Show</a>
+                                    <a href="{{ route('merk.edit', $item->id) }}" class="btn btn-warning">Edit</a>
+                                    <form action="{{ route('merk.destroy', $item->id) }}" method="post" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger show_confirm" data-lte-toggle="tooltip" title="Delete" data-nama="{{$item->nama}}">Delete</button>
+                                    </form>
+                                </td>
+                            </tr> 
+                        @endforeach
+                    </tbody>
+                </table>
+                
+        </div>
+            <!-- /.card-body -->
+            <!-- <div class="card-footer">Footer</div> -->
+            <!-- /.card-footer-->
+        </div>
+        <!-- /.card -->
+        </div>
+    </div>
+    <!--end::Row-->
 
-@endforeach
-</table>
+@endsection
